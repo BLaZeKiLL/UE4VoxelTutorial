@@ -1,5 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+using System.IO;
+
 using UnrealBuildTool;
 
 public class VloxyEngine : ModuleRules
@@ -8,9 +10,20 @@ public class VloxyEngine : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new[] {
+			"Core", 
+			"CoreUObject", 
+			"Engine", 
+			"InputCore"
+		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+		PrivateDependencyModuleNames.AddRange(new[] {
+			"ProceduralMeshComponent", 
+			"FastNoise", 
+			"FastNoiseGenerator"
+		});
+
+		// PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class VLOXYENGINE_API AVloxyEngineGameModeBase : public AGameModeBase
+class AVloxyEngineGameModeBase final : public AGameModeBase
 {
 	GENERATED_BODY()
 	
