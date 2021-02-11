@@ -1,11 +1,11 @@
 #pragma once
 
-enum EDirection
+enum class EDirection
 {
-	Forward, Back, Left, Right, Up, Down
+	Forward, Right, Back, Left, Up, Down
 };
 
-enum EBlock
+enum class EBlock
 {
 	Null, Air, Stone, Dirt, Grass
 };
