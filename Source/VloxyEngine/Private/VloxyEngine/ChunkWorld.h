@@ -7,7 +7,7 @@
 #include "ChunkWorld.generated.h"
 
 UCLASS()
-class VLOXYENGINE_API AChunkWorld : public AActor
+class AChunkWorld : public AActor
 {
 	GENERATED_BODY()
 

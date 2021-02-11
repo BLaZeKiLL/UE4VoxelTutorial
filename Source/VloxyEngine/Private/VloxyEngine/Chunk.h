@@ -55,7 +55,12 @@ private:
     };
 
 	const int BlockTriangleData[24] = {
-		0,1,2,3,5,0,3,6,4,5,6,7,1,4,7,2,5,4,1,0,3,2,7,6
+		0,1,2,3, // Forward
+		5,0,3,6, // Right
+		4,5,6,7, // Back
+		1,4,7,2, // Left
+		5,4,1,0, // Up
+		3,2,7,6  // Down
     };
 
 	void GenerateBlocks();
@@ -70,7 +75,7 @@ private:
 
 	TArray<FVector> GetFaceVertices(EDirection Direction, FVector Position) const;
 
-	FVector GetPositionInDIrection(EDirection Direction, FVector Position) const;
+	FVector GetPositionInDirection(EDirection Direction, FVector Position) const;
 	
 	int GetBlockIndex(int X, int Y, int Z) const;
 	

@@ -90,7 +90,7 @@ void AChunk::GenerateMesh()
 					
 					for (auto Direction : {EDirection::Forward, EDirection::Right, EDirection::Back, EDirection::Left, EDirection::Up, EDirection::Down})
 					{
-						if (Check(GetPositionInDIrection(Direction, Position)))
+						if (Check(GetPositionInDirection(Direction, Position)))
 						{
 							CreateFace(Direction, Position * 100);
 						}
@@ -136,7 +136,7 @@ TArray<FVector> AChunk::GetFaceVertices(EDirection Direction, const FVector Posi
 }
 
 
-FVector AChunk::GetPositionInDIrection(const EDirection Direction, const FVector Position) const
+FVector AChunk::GetPositionInDirection(const EDirection Direction, const FVector Position) const
 {
 	switch (Direction)
 	{
