@@ -14,7 +14,7 @@ AChunk::AChunk()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-
+	
 	// Create Components
 	Mesh = CreateDefaultSubobject<UProceduralMeshComponent>("Mesh");
 	Noise = CreateDefaultSubobject<UFastNoiseWrapper>("Noise");
@@ -31,6 +31,9 @@ AChunk::AChunk()
 
 	// Initialize Blocks
 	Blocks.SetNum(Size * Size * Size);
+
+	// Mesh Settings
+	Mesh->SetCastShadow(false);
 }
 
 // Called when the game starts or when spawned

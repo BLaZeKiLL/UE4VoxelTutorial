@@ -17,6 +17,13 @@ class AChunk : public AActor
 	GENERATED_BODY()
 
 public:
+	
+	UPROPERTY(EditAnywhere, Category="Chunk")
+	int Size = 32;
+
+	UPROPERTY(EditAnywhere, Category="Chunk")
+	int Scale = 1;
+	
 	// Sets default values for this actor's properties
 	AChunk();
 
@@ -33,9 +40,6 @@ private:
 	TArray<FVector> VertexData;
 	TArray<int> TriangleData;
 	TArray<FVector2D> UVData;
-
-	const int Size = 32;
-	const int Scale = 1;
 
 	int VertexCount = 0;
 	
